@@ -66,7 +66,7 @@ public class ArduinoUsbChannel {
         serialPort.setEventsMask(mask);//Set mask
         serialPort.addEventListener(new SerialPortEventListener() {
 
-            @Override
+            
             public void serialEvent(SerialPortEvent event) {
                 if (event.isRXCHAR()) {//If data is available
 
@@ -103,7 +103,7 @@ public class ArduinoUsbChannel {
 
         this.writingThread = new Thread(new Runnable() {
 
-            @Override
+            
             public void run() {
 
                 PipedInputStream input = (PipedInputStream) ArduinoUsbChannel.this.vcpInputInnerStream;
